@@ -1,0 +1,5 @@
+// making sure the enemy doesn't respawn on an enemy or obstacle
+while(CE(EY(i),EX(i)) && CW(EY(i),EX(i))) {
+  EX(i)=rand()%27+2;
+  EY(i)=rand()%7+2;
+}
