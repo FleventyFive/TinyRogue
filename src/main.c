@@ -7,7 +7,7 @@
 #define PS mvprintw
 #define CW(y,x) mvinch(y,x)=='#'
 #define CE(y,x) mvinch(y,x)=='Y'
-#define CT for(int i=0;i<30;++i)for(int j=0;j<9;++j)mvaddch(j+1,i+31,' ')
+#define CT for(int i=0;i<30;++i)for(int j=0;j<9;++j)A(j+1,i+31,' ')
 #define UH(h,g) PS(0,31,"Health %d, Gold %d  ",h,g)
 #define EI else if
 #define X ch.x
@@ -91,7 +91,7 @@ int main(void) {
   A(Y,X,'@');
   refresh();
 
-  c=getchar();
+  c=getch();
 
   while(c!='Q') {
     CT;
@@ -168,19 +168,19 @@ int main(void) {
     }
 
     if(PH<=0) {
-      PS(5,3,"You Loose! Press Q");
+      PS(5,3,"You Loose!");
       getch();
       break;
     }
     if(ch.g>=20) {
-      PS(5,3,"You Win! Press Q");
+      PS(5,3,"You Win!");
       getch();
       break;
     }
     A(Y,X,'@');
     UH(PH,ch.g);
     refresh();
-    c=getchar();
+    c=getch();
   }
 
   endwin();
