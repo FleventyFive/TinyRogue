@@ -1,7 +1,7 @@
 CC=clang
 CFLAGS=-g -c -Wall -Wextra -O0
-NAME=roguelike
-LDFLAGS=-lstdc++ -lncurses
+NAME=rl
+LDFLAGS=-lncurses
 OBJ=obj
 SRC=src
 TARGET=target
